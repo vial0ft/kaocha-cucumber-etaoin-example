@@ -26,7 +26,7 @@ You have to have a path to a web-driver (like `chromedriver` or `geckodriver`) i
                  :kaocha/test-paths    ["test/features"]
                  :cucumber/glue-paths  ["test/steps_definitions"]
                  :kaocha/ns-patterns   [".*"]}]
-;; others confirmation
+;; other confirmation
 }
 ```
 Here we created 2 groups of tests `unit` and `features`. `features` group is specific for `kaocha-cucumber`. We are able to run it by `clojure -M:test features`.
