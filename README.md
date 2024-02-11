@@ -4,7 +4,7 @@ This is quick demo for [kaocha-cucumber](https://github.com/lambdaisland/kaocha-
 
 ## Before start
 You have to have a path to a web-driver (like `chromedriver` or `geckodriver`) in your `PATH` for `etaoin` or provide it by configuration (see [etaoin docs](https://github.com/clj-commons/etaoin/blob/master/doc/01-user-guide.adoc#driver-options)). 
-## Get start
+## Get started
 
 1. Add libs
   - lambdaisland/kaocha
