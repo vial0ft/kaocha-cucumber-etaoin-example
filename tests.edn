@@ -1,0 +1,29 @@
+{:kaocha/tests                       [{:kaocha.testable/id           :unit
+                                       :kaocha.testable/type         :kaocha.type/clojure.test
+                                       :kaocha/source-paths ["src"]
+                                       :kaocha/test-paths   ["test/unit"]
+                                       :kaocha/ns-patterns [".*"]}
+
+                                      {:kaocha.testable/id                  :features
+                                       :kaocha.testable/type                :kaocha.type/cucumber
+                                       :kaocha/source-paths        ["src"]
+                                       :kaocha/test-paths          ["test/features"]
+                                       :cucumber/glue-paths ["test/steps_definitions"]
+                                       :kaocha/ns-patterns [".*"]
+                                      ;;cucumber/locale     "de-DE"  ; optional. Currently only for number
+                                        ; format parsing, passed to
+                                        ; java.util.Locale/forLanguageTag
+                                       }]
+ :kaocha/fail-fast?                  false
+ :kaocha/color?                      true
+ :kaocha/reporter                    [kaocha.report/dots]
+ :kaocha/plugins                     [:kaocha.plugin/randomize
+                                      :kaocha.plugin/filter
+                                      :kaocha.plugin/capture-output
+                                      ;;:kaocha.plugin/profiling
+                                      ]
+ :kaocha.plugin.randomize/seed       950716166
+ :kaocha.plugin.randomize/randomize? true
+ :kaocha.plugin.profiling/count      3
+ ;;:kaocha.plugin.profiling/profiling? true
+ }
