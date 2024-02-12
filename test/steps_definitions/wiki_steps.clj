@@ -36,22 +36,3 @@
 
 (Then "I close browser" [{:keys [driver] :as state}]
   (eapi/quit driver))
-
-
-(comment
-  (def bro (create-driver {:headless false
-                           :driver :firefox}))
-
-  (eapi/go bro "https://google.com")
-  (eapi/fill-el bro (eapi/query bro {:name "q"}) "wikipedia main page")
-  (eapi/fill-active bro ekeys/enter)
-  (eapi/click-visible bro {:tag :h3
-                           :fn/text "Wikipedia, the free encyclopedia"})
-  (eapi/fill-el bro (eapi/query bro {:name "search"}) "CLojure")
-  (eapi/fill-active bro ekeys/enter)
-  (eapi/has-text? bro "Hickey spent about two and a half years working on Clojure before releasing it publicly in October 2007")
-
-  (eapi/quit bro)
-
-  (def bro (eapi/firefox)))
-
